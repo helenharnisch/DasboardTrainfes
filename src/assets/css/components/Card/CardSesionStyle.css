@@ -1,0 +1,42 @@
+.card-trainfes{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.card-trainfes:hover{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.10);
+}
+
+.card-body{
+  padding: 20px 0px 20px 20px;
+}
+
+.card-title{
+  color: #8598AD;
+  font-size: 16px;
+}
+
+.card-category{
+  font-size: 18px;
+  color: #1E88E5;
+}
+
+.card-activity{
+  color: #3F567A;
+  font-size: 48px;
+  margin-top: -15px;
+  font-weight: 500;
+}
+
+.iconArow:hover{
+  width: 65%;
+  cursor: pointer;
+}
