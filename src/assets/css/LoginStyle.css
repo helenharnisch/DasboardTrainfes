@@ -1,0 +1,52 @@
+.fw-200{
+  font-weight: 200;
+  }
+
+.fz-12{
+  font-size: 12px;
+}
+
+.text-trainfes{
+  color: #1E88E5;
+}
+
+.welcome{
+  background-color: #1E88E5;
+  height: 450px;
+  border-radius: 5px 0 0 5px;
+  }
+
+.form-login{
+  height: 450px;
+  background-color: #FFFFFF;
+  border-radius: 0 5px 5px 0;
+}
+
+.form{
+  width: 270px;
+}
+
+.input-text {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.0;
+  color: #979797;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-bottom: 1px solid #ced4da;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-trainfes-primary {
+  background-color: #1E88E5;
+  color: #FFFFFF;
+}
+
+.btn-trainfes-primary:hover {
+  background-color: #0576D9;
+}

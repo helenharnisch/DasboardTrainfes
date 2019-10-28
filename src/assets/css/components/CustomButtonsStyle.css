@@ -1,0 +1,45 @@
+.btn-trainfes {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 6px 35px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 20px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.10);
+}
+
+.btn-trainfes-primary {
+  background-color: #1E88E5;
+  color: #FFFFFF;
+}
+
+.btn-trainfes-primary:hover {
+  background-color: #0576D9;
+}
+
+.btn-trainfes-secondary {
+  background-color: #FFFFFF;
+  color: #1E88E5;
+}
+
+.btn-trainfes-secondary:hover {
+  color: #0576D9;
+  font-weight: 600;
+}
+
+.btn-trainfes-warning {
+  background-color: #FBA72B;
+  color: #FFFFFF;
+}
+
+.btn-trainfes-warning:hover {
+  background-color: #F89D15;
+}

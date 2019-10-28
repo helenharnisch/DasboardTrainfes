@@ -25,7 +25,7 @@ class Layout extends Component {
                     <div className="col-md-10 scroll-main">
                         <Navbar titulo={"Sesiones"} />
                         <div className="col-md-11 mx-auto pt-60">
-                            {/* <CardSesion>{todos}</CardSesion> */}
+                            {<CardSesion>{todos}</CardSesion> }
                             <p>Acá van las rutas</p>
                             {/* <Router routes={Route().subRoutes} /> */}
                         </div>
