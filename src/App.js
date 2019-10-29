@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import { Middleware } from './lib/Router'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './layouts/Login'
+import Layout from './layouts/Layout';
+
 import './App.css';
-
-import Routes from './Routes'
-import Router from './lib/Router'
-
-import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
 
   render() {
     return (
       <BrowserRouter>
-        <Router routes={Routes}/>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <Route path="/" component={() => Middleware(Layout)}/>
+        </Switch>
       </BrowserRouter>
     );
   }

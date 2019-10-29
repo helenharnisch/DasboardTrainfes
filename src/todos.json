@@ -4,61 +4,43 @@
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 341,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":1
     },
     {
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 342,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":2
     },
     {
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 343,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":3
     },
     {
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 344,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":4
     },
     {
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 345,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":5
     },
     {
       "title": "Nombre Sesión",
       "category": "Total pasos",
       "activity": 341,
-      "name": "Luis Vilches"
-    },
-    {
-      "title": "Nombre Sesión",
-      "category": "Total pasos",
-      "activity": 342,
-      "name": "Luis Vilches"
-    },
-    {
-      "title": "Nombre Sesión",
-      "category": "Total pasos",
-      "activity": 343,
-      "name": "Luis Vilches"
-    },
-    {
-      "title": "Nombre Sesión",
-      "category": "Total pasos",
-      "activity": 344,
-      "name": "Luis Vilches"
-    },
-    {
-      "title": "Nombre Sesión",
-      "category": "Total pasos",
-      "activity": 345,
-      "name": "Luis Vilches"
+      "name": "Luis Vilches",
+      "id":6
     }
   ]
 }

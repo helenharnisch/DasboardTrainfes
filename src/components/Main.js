@@ -8,9 +8,7 @@ const Main = ({title,children}) => (
             </div>
         </div>
         <div className="row">
-            <div className="col-md-12">
-                {children}
-            </div>
+            {children}
         </div>
     </div>
 )
