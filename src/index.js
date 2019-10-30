@@ -4,15 +4,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import axios from 'axios'
 import { getToken } from './lib/Router'
+import axios from 'axios'
 
-axios.interceptors.request.use((config) => {
-    const token = getToken();
-    config.baseURL = 'https://brainfes.herokuapp.com';
-    if(token != null || undefined){
-        config.headers.Authentication = "Bearer " + token;    
-    }
+
+axios.interceptors.request.use(async (config) => {
+    const token = `Bearer ${eval(await getToken())}`;
+    config.baseURL = 'https://brainfes.herokuapp.com/v1';
+    config.headers.Authorization = token;
+    console.log(config)
     return config;
 }, (error) => {
     return Promise.reject(error);

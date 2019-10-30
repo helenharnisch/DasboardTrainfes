@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CustomButtons from '../components/CustomButtons.js'
 import styles from '../assets/css/LoginStyle.css'
 import axios from 'axios'
+import {setToken} from '../lib/Router'
 
 import IcoFace from '../assets/img/iconSocial/icon-facebook.svg'
 import IcoInsta from '../assets/img/iconSocial/icon-instagram.svg'
@@ -10,27 +11,29 @@ import IcoLink from '../assets/img/iconSocial/icon-linkedin.svg'
 
 
 class Login extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            mail:'juanpablo@trainfes.com',
-            pass:'juanpablo7480'
+            mail: 'juanpablo@trainfes.com',
+            pass: 'juanpablo7480'
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
 
     }
 
 
-    sign(){
-        console.log(this.state)
-        const fd = new FormData();
-        fd.append('email', this.state.mail)
-        fd.append('pass', this.state.pass)
-        axios.post('/v1/users/login',{data:fd})
-        .then(res => {console.log(res)})
-        .catch(err => console.log(err))
+    sign() {
+        const { mail, pass } = this.state;
+        console.log(this.props)
+        return axios.post('/users/login', {email:mail,password:pass})
+            .then(res => { 
+                setToken(res.data.result);
+                this.props.history.push('/');
+                console.log(res)
+            })
+            .catch(err => console.log(err))
     }
 
 
@@ -52,11 +55,11 @@ class Login extends Component {
                             <img src={IcoLink} className="img-fluid p-2" alt="Icon Linkedin"></img>
                         </div>
                         <form className="form mx-auto">
-                            <input type="text" placeholder="Email" className="input-text" value={this.state.mail} onChange={(value) =>this.setState({mail:value.target.value})}/>
+                            <input type="text" placeholder="Email" className="input-text" value={this.state.mail} onChange={(value) => this.setState({ mail: value.target.value })} />
                             <br /><br />
-                            <input type="text" placeholder="Contraseña" className="input-text" value={this.state.pass} onChange={(value) => this.setState({pass:value.target.value})}/>
+                            <input type="text" placeholder="Contraseña" className="input-text" value={this.state.pass} onChange={(value) => this.setState({ pass: value.target.value })} />
                             <br /><br />
-                            <CustomButtons className="btn-trainfes-primary" button={"ENTRAR"} onClick={this.sign.bind(this)}/>
+                            <CustomButtons className="btn-trainfes-primary" button={"ENTRAR"} onClick={this.sign.bind(this)} />
                         </form>
                     </div>
                 </div>
