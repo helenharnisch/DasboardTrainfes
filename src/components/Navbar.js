@@ -9,7 +9,7 @@ class Navbar extends Component {
         <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="#"></a>
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap">
-            <a className="nav-link" href="#">{ this.props.titulo }</a>
+            <a className="nav-link" href="#"></a>
           </li>
         </ul>
         <input className="search col-sm-4 col-md-3 px-3" type="text" placeholder="Buscar" aria-label="Buscar"/>

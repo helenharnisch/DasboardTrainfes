@@ -3,7 +3,7 @@ import Main from '../components/Main'
 
 const Dashboard = ({ }) => (
     <Main title="Dashboard">
-        <p>Hola mundo</p>
+        <p></p>
     </Main>
 )
 

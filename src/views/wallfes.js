@@ -1,6 +1,7 @@
 import React from "react";
 import Main from '../components/Main'
 import CardSesion from '../components/Card/CardSesion'
+import CardLastSession from '../components/Card/CardLastSession'
 import { todos } from '../todos.json';
 console.log(todos)
 const Other = ({ }) => (
