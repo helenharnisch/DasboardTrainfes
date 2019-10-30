@@ -6,7 +6,7 @@ class CustomButtons extends Component {
     return (
 
       <div className="my-3">
-          <button type="button" className="btn-trainfes">{ this.props.button }</button>
+          <button type="button" className="btn-trainfes" onClick={this.props.onClick}>{ this.props.button }</button>
       </div>
 
     )

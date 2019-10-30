@@ -13,7 +13,7 @@ class CardSesion extends Component {
   render() {
     const {title,category,activity,name,id} = this.props;
     return (
-      <div className="col-md-4">
+      <div className="col-md-4" style={{padding:10}}>
         <Link to={"/walkfes/"+id} className="card-trainfes">
           <div className="row">
             <div className="col-md-6">

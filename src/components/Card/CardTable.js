@@ -5,7 +5,7 @@ class CardTable extends Component {
   render() {
     return (
 
-
+      <div></div>
     )
   }
 }
