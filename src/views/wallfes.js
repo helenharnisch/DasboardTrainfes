@@ -3,7 +3,6 @@ import Main from '../components/Main'
 import CardSesion from '../components/Card/CardSesion'
 import axios from 'axios'
 import { getUserId } from '../lib/Router'
-import { todos } from '../todos.json';
 
 
 class Walkfes extends React.Component {
@@ -33,10 +32,7 @@ class Walkfes extends React.Component {
     }
 
     async componentDidMount() {
-
         this.getData();
-        console.log(this.state.data)
-
     }
 
     render() {
