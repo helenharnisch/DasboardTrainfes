@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar.js';
 import Sidebar from '../components/Sidebar.js';
 
 import Rutas from '../routes/routes'
+
 class Layout extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +13,7 @@ class Layout extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="row">
+                <div className="row scroll-row">
                     <div className="col-md-2 p-0">
                         <Sidebar />
                     </div>

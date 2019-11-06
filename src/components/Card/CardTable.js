@@ -4,14 +4,14 @@ import styles from '../../assets/css/components/Card/CardTableStyle.css'
 class CardTable extends Component {
   render() {
     return (
-
-      <table className="table table-hover">
+     <div className="table-responsive-xl">
+      <table className="table table-hover text-center">
         <thead className="text-black-50">
           <tr>
-            <th scope="col">Actividades</th>
-            <th scope="col">Actividades</th>
-            <th scope="col">Actividades</th>
-            <th scope="col">Actividades</th>
+            <th scope="col" className="border-0">Actividades</th>
+            <th scope="col" className="border-0">Actividades</th>
+            <th scope="col" className="border-0">Actividades</th>
+            <th scope="col" className="border-0">Actividades</th>
           </tr>
         </thead>
         <tbody className="text-black-50">
@@ -59,6 +59,7 @@ class CardTable extends Component {
           </tr>
         </tbody>
       </table>
+    </div>
     )
   }
 }
