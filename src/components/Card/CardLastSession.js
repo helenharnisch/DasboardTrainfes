@@ -19,8 +19,8 @@ class CardLastSession extends Component {
               <div className="card-body">
                 <p className="card-title mb-1">{ this.props.title }</p>
                 <p className="card-category m-0">{ this.props.category }</p>
-                <p className="card-activity text-black-50 mb-0">{ this.props.activity }</p>
-                <p className="text-black-50 m-0">{ this.props.name }</p>
+                <p className="card-activity text-grey-04 mb-0">{ this.props.activity }</p>
+                <p className="text-grey-04 m-0">{ this.props.name }</p>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center p-0">

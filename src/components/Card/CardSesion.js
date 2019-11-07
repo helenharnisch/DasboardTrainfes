@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import IcoWalkfes from '../../assets/img/iconModos/icon-walkfes.svg'
 import IcoArow from '../../assets/img/icon/icon-arow.svg'
+import CardTrainfes from './CardTrainfes.js'
 import '../../assets/css/components/Card/CardSesionStyle.css'
 
 
@@ -17,8 +18,9 @@ class CardSesion extends Component {
   render() {
     const {title,category,activity,name,id} = this.props;
     return (
-      <div className="col-md-4" style={{padding:10}}>
-        <Link to={"/walkfes/"+id} className="card-trainfes">
+      <div className="col-md-4">
+      <CardTrainfes>
+        <Link to={"/walkfes/"+id}>
           <div className="row">
             <div className="col-md-6">
               <div className="card-body">
@@ -32,13 +34,11 @@ class CardSesion extends Component {
               <img src={IcoWalkfes} className="img-fluid" alt="Icon walkfes"></img>
             </div>
             <div className="col-md-3 d-flex align-items-end p-0">
-              
-                
-              
-              <img src={IcoArow} className="img-fluid iconArow" alt="Icon Arow"></img>
+            <img src={IcoArow} className="img-fluid iconArow" alt="Icon Arow"></img>
             </div>
           </div>
         </Link>
+        </CardTrainfes>
       </div>
     )
   }
