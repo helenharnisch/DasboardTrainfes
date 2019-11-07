@@ -10,6 +10,10 @@ class CardSesion extends Component {
     super();
   }
 
+  async componentDidMount(){
+   
+  }
+
   render() {
     const {title,category,activity,name,id} = this.props;
     return (
