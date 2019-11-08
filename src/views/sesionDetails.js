@@ -3,7 +3,9 @@ import React from "react";
 import ChartistGraph from "react-chartist";
 import { options, animation1 } from '../variables/charts'
 import {
-  annualStepsChart,
+  levelStepsChart,
+  pie,
+  stepsChart,
   emailsSubscriptionChart,
   completedTasksChart
 } from "../variables/charts.js";
@@ -17,82 +19,82 @@ import CardTable from '../components/Card/CardTable.js';
 import axios from 'axios';
 import { getUserId } from '../lib/Router'
 
-class SessionDetails extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: {}
-    }
-  }
-
-  componentDidMount() {
-
-  }
-
-  render() {
-    return (
-      <Main title={"Session" + this.props.match.params.id}>
-        <a style={{ displa: "block", position: 'absolute', top: '70px', left: '-25px' }} onClick={() => this.props.history.goBack()}><img src={IcoArow} /></a>
-        <div className="col-md-12">
-          <div className="row">
-            <div className="col-md-4">
-              <CardTrainfes>
-                <CardLastSession title={"Nombre Sesión"} category={"Total pasos"} activity={349} name={"Última Sesión"} />
-              </CardTrainfes>
-            </div>
-            <div className="col-md-4">
-              <CardTrainfes>
-                <CardRealSession title={"Nombre Sesión"} category={"Total pasos"} activity={350} name={"Actual Sesión"} />
-              </CardTrainfes>
-            </div>
-            <div className="col-md-4">
-              <CardTrainfes>
-                <CardReviewSession title={"Nombre Sesión"} category={"Total pasos"} activity={349} name={"Estimado"} />
-              </CardTrainfes>
-            </div>
+const SessionDetails = (props) => {
+  console.log(props)
+  return (
+    <Main title={"Session" + props.match.params.id}>
+      <a style={{ displa: "block", position: 'absolute', top: '70px', left: '-25px' }} onClick={() => props.history.goBack()}><img src={IcoArow} /></a>
+      <div className="col-md-12">
+        <div className="row">
+          <div className="col-md-4">
+            <CardTrainfes>
+              <CardLastSession title={"Última Sesión"} category={"Total pasos"} activity={349} />
+            </CardTrainfes>
           </div>
-          <div className="row">
-            <div className="col-md-4">
-              <CardTrainfes>
-                <div className="prueba">
-                <ChartistGraph
-                    className=""
-                    data={{ series: [20, 10, 30, 40] }}
-                    type="Pie"
-                    options={{donut: true,donutWidth: 60,donutSolid: true,startAngle: 270,showLabel: true}}
-                    listener={annualStepsChart.animation}
-                  />
-                </div>
-              </CardTrainfes>
-            </div>
-            <div className="col-md-8">
-              <CardTrainfes>
-                <div className="ct-chart">
-                  <ChartistGraph
-                    className=""
-                    data={annualStepsChart.data}
-                    type="Line"
-                    options={annualStepsChart.options}
-                    listener={annualStepsChart.animation}
-                  />
-                </div>
-              </CardTrainfes>
-            </div>
+          <div className="col-md-4">
+            <CardTrainfes>
+              <CardRealSession title={"Actual Sesión"} category={"Total pasos"} activity={350} />
+            </CardTrainfes>
           </div>
-          <div className="row">
-            <div className="col-md-12">
-              <CardTrainfes>
-                <CardTable data={[]} />
-              </CardTrainfes>
-            </div>
+          <div className="col-md-4">
+            <CardTrainfes>
+              <CardReviewSession title={"Estimado"} category={"Total pasos"} activity={349} />
+            </CardTrainfes>
           </div>
         </div>
-      </Main>
-    )
-  }
-
+        <div className="row">
+          <div className="col-md-12">
+            <CardTrainfes>
+              <div className="card-body">
+                <p className="card-title mb-1">Titulo</p>
+                <p className="card-category m-0">Total pasos</p>
+                <p className="card-activity mb-0">123</p>
+              </div>
+              <div className="ct-chart">
+                <ChartistGraph
+                  className=""
+                  data={stepsChart.data}
+                  type="Line"
+                  options={stepsChart.options}
+                  listener={stepsChart.animation}
+                />
+              </div>
+            </CardTrainfes>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <CardTrainfes>
+              <div className="card-body">
+                <p className="card-title mb-1">Titulo</p>
+                <p className="card-category m-0">Total pasos</p>
+                <p className="card-activity mb-0">123</p>
+              </div>
+              <div className="ct-chart">
+                <ChartistGraph
+                  className=""
+                  data={levelStepsChart.data}
+                  type="Line"
+                  options={levelStepsChart.options}
+                  listener={levelStepsChart.animation}
+                />
+              </div>
+            </CardTrainfes>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <CardTrainfes>
+              <CardTable />
+            </CardTrainfes>
+          </div>
+        </div>
+      </div>
+    </Main>
+  )
 }
+
+
 
 
 
