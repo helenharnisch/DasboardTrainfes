@@ -10,6 +10,17 @@ var delays2 = 80,
   durations2 = 500;
 
 
+const pie = {
+  data: {
+    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    series: [[12, 17, 7, 17, 23, 18, 38, 7, 17, 23, 18, 38]]
+  },
+  options: {
+    donut: true,
+    showLabel: false
+  }
+}
+
 
 const annualStepsChart = {
   data: {
@@ -31,7 +42,7 @@ const annualStepsChart = {
   },
   // for animation
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -100,7 +111,7 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function(value) {
+          labelInterpolationFnc: function (value) {
             return value[0];
           }
         }
@@ -108,7 +119,7 @@ const emailsSubscriptionChart = {
     ]
   ],
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "bar") {
         data.element.animate({
           opacity: {
@@ -145,7 +156,7 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -180,5 +191,6 @@ const completedTasksChart = {
 module.exports = {
   annualStepsChart,
   emailsSubscriptionChart,
-  completedTasksChart
+  completedTasksChart,
+  pie
 };

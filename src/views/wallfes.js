@@ -18,11 +18,11 @@ class Walkfes extends React.Component {
         axios.get('/session')
             .then(async res => {
                 await res.data.result.map(async e => {
+                    console.log(e.user_id === getUserId(),e.user_id,getUserId())
                     if (e.user_id === getUserId()) {
                         const a = await axios.get('/users/search/activity/' + getUserId() + '/' + e._id)
                         console.log('>>>', a)
                         e['activity'] = a.data.result;
-                        // e['steps'] = a.data.result.activity.activity_results[a.data.result.activity_results.lenght].steps_taken;
                         console.log('1',e);
                         this.setState({ data: [...this.state.data, e] })
                     }
