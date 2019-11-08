@@ -5,11 +5,20 @@
 /*Tamaño Gráfico*/
 .ct-chart {
   height: 280px;
-  padding-top: 10px;
   padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 5px;
 }
 /*Grosor lineas Gráfico*/
 .ct-series-a .ct-line {
+  stroke-width: 1px;
+}
+.ct-series-a .ct-area {
+  fill: #1E88E5;
+  stroke-width: 1px;
+}
+.ct-series-b .ct-area {
+  fill: #29E1FF;
   stroke-width: 1px;
 }
 /* Grosor puntos Gráfico*/
@@ -19,8 +28,8 @@
 }
 /*Grilla Gráfico*/
 .ct-grids .ct-grid {
-  stroke: rgba(0,0,0,.2);
-  stroke-width: 0.2px;
+  stroke: rgba(0,0,0,.0.0);
+  stroke-width: 0.1px;
   stroke-dasharray: none;
 }
 /*Color Gráfico*/
@@ -29,6 +38,13 @@
 .ct-series-a .ct-bar,
 .ct-series-a .ct-slice-donut {
   stroke: #1E88E5;
+}
+.ct-series-b .ct-point,
+.ct-series-b .ct-line,
+.ct-series-b .ct-bar,
+.ct-series-b .ct-slice-donut {
+  stroke: #29E1FF;
+  stroke-width: 1px;
 }
 
 .ct-label .ct-vertical .ct-start{
@@ -42,6 +58,10 @@ a{
   color: #636262;
 }
 
+.ml-12{
+  margin-left: 12px;
+}
+
 .fz-12{
   font-size: 12px;
 }
@@ -52,6 +72,14 @@ a{
 
 .pt-60{
   padding-top: 60px;
+}
+
+.decoration-none{
+  text-decoration: none!important;
+}
+
+.link:focus{
+  text-decoration: none;
 }
 
 .shadow-trainfes{

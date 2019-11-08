@@ -5,7 +5,7 @@ import { todos } from '../todos.json';
 console.log(todos)
 const Sensor = ({ }) => (
     <Main title="Modo Sensor">
-        { todos.map((element,index) => (<CardSesion key={index} title={element.title} category={element.category} activity={element.activity} name={element.name} id={element.id}/>)) }
+        { todos.map((element,index) => (<CardSesion key={index} title={element.title} category={element.category} activity={element.activity} id={element.id}/>)) }
     </Main>
 )
 

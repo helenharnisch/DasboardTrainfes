@@ -8,7 +8,7 @@ class Sidebar extends Component {
     return (
 
       <nav className="d-none d-md-block bg-white sidebar nav-trainfes shadow-trainfes">
-        <div className="circle-outer"><div className="circle-inner"></div></div>
+        <div className="circle-outer d-flex justify-content-center d-flex align-items-center"><div className="circle-inner d-flex justify-content-center d-flex align-items-center"><span className="text-trainfes font-weight-bold">L.V</span></div></div>
         <p className="text-center my-3 text-grey-05">Hola, Luis Vilches<span><a href="#"><img src={IcoDropdown} className="img-fluid mx-3" alt="Icon Dropdown Toggle"></img></a></span></p>
         <div className="sidebar-trainfes sidebar-sticky">
           <ul className="nav flex-column">

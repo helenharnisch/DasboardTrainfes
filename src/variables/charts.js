@@ -10,10 +10,58 @@ var delays2 = 80,
   durations2 = 500;
 
 
-
-const annualStepsChart = {
+const pie = {
   data: {
-    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    series: [10, 20]
+  },
+  options: {
+    donut: true,
+    donutWidth: 20,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: false
+  },
+
+};
+
+
+const levelStepsChart = {
+  data: {
+    labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+    series: [
+      [1, 5, 2, 5, 4, 9],
+      [2, 3, 4, 8, 2, 3]
+
+    ]
+  },
+  options: {
+    low: 0,
+    showArea: true,
+    showPoint: false,
+    fullWidth: true
+  },
+  // for animation
+  animation: {
+    draw: function(data) {
+      if (data.type === "line" || data.type === "area") {
+        data.element.animate({
+          d: {
+            begin: 2000 * data.index,
+            dur: 2000,
+            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    }
+  }
+};
+
+
+const stepsChart = {
+  data: {
+    labels: ["8:00 hrs.", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs"],
     series: [[12, 17, 7, 17, 23, 18, 38, 7, 17, 23, 18, 38]]
   },
   options: {
@@ -178,7 +226,9 @@ const completedTasksChart = {
 
 
 module.exports = {
-  annualStepsChart,
+  levelStepsChart,
+  pie,
+  stepsChart,
   emailsSubscriptionChart,
   completedTasksChart
 };

@@ -22,13 +22,13 @@ class CardTable extends Component {
           </tr>
         </thead>
         <tbody className="text-black-50">
-          {data.map((e,i) => (
+          {data ? data.map((e,i) => (
           <tr key={i}>
             <th scope="row">{e.created_at}</th>
             <td>{e.date_realization}</td>
             <td>{e.start_time ? e.start_time : '-'}</td>
             <td>{e.end_time ? e.end_time : '-'}</td>
-          </tr>))}
+          </tr>)): null}
         </tbody>
       </table>
     </div>

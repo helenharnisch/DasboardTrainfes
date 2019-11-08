@@ -2,7 +2,9 @@ import React from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import {
-  annualStepsChart,
+  levelStepsChart,
+  pie,
+  stepsChart,
   emailsSubscriptionChart,
   completedTasksChart
 } from "../variables/charts.js";
@@ -25,35 +27,35 @@ const SessionDetails = (props) => {
         <div className="row">
           <div className="col-md-4">
             <CardTrainfes>
-              <CardLastSession title={"Nombre Sesión"} category={"Total pasos"} activity={349} name={"Última Sesión"} />
+              <CardLastSession title={"Última Sesión"} category={"Total pasos"} activity={349} />
             </CardTrainfes>
           </div>
           <div className="col-md-4">
             <CardTrainfes>
-              <CardRealSession title={"Nombre Sesión"} category={"Total pasos"} activity={350} name={"Actual Sesión"} />
+              <CardRealSession title={"Actual Sesión"} category={"Total pasos"} activity={350} />
             </CardTrainfes>
           </div>
           <div className="col-md-4">
             <CardTrainfes>
-              <CardReviewSession title={"Nombre Sesión"} category={"Total pasos"} activity={349} name={"Estimado"} />
+              <CardReviewSession title={"Estimado"} category={"Total pasos"} activity={349} />
             </CardTrainfes>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-12">
             <CardTrainfes>
-              <div className="prueba"></div>
-            </CardTrainfes>
-          </div>
-          <div className="col-md-8">
-            <CardTrainfes>
+              <div className="card-body">
+                <p className="card-title mb-1">Titulo</p>
+                <p className="card-category m-0">Total pasos</p>
+                <p className="card-activity mb-0">123</p>
+              </div>
               <div className="ct-chart">
                 <ChartistGraph
                   className=""
-                  data={annualStepsChart.data}
+                  data={stepsChart.data}
                   type="Line"
-                  options={annualStepsChart.options}
-                  listener={annualStepsChart.animation}
+                  options={stepsChart.options}
+                  listener={stepsChart.animation}
                 />
               </div>
             </CardTrainfes>
@@ -62,7 +64,27 @@ const SessionDetails = (props) => {
         <div className="row">
           <div className="col-md-12">
             <CardTrainfes>
-              <CardTable data={}/>
+              <div className="card-body">
+                <p className="card-title mb-1">Titulo</p>
+                <p className="card-category m-0">Total pasos</p>
+                <p className="card-activity mb-0">123</p>
+              </div>
+              <div className="ct-chart">
+                <ChartistGraph
+                  className=""
+                  data={levelStepsChart.data}
+                  type="Line"
+                  options={levelStepsChart.options}
+                  listener={levelStepsChart.animation}
+                />
+              </div>
+            </CardTrainfes>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <CardTrainfes>
+              <CardTable/>
             </CardTrainfes>
           </div>
         </div>
