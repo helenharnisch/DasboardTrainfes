@@ -8,6 +8,12 @@ class CardTable extends Component {
 
     }
   }
+
+  parseDate(date){
+    date = new Date(date);
+    return date.getDate() + ' - ' + date.getMonth() + ' - ' + date.getFullYear();
+  }
+
   render() {
     const { data } = this.props;
     return (
@@ -15,19 +21,19 @@ class CardTable extends Component {
       <table className="table table-hover text-center">
         <thead className="text-black-50">
           <tr>
-            <th scope="col" className="border-0">Actividades</th>
-            <th scope="col" className="border-0">Actividades</th>
-            <th scope="col" className="border-0">Actividades</th>
-            <th scope="col" className="border-0">Actividades</th>
+            <th scope="col" className="border-0">Fecha</th>
+            <th scope="col" className="border-0">Total de pasos</th>
+            <th scope="col" className="border-0">PPM</th>
+            <th scope="col" className="border-0">Duracion</th>
           </tr>
         </thead>
         <tbody className="text-black-50">
           {data ? data.map((e,i) => (
           <tr key={i}>
-            <th scope="row">{e.created_at}</th>
-            <td>{e.date_realization}</td>
-            <td>{e.start_time ? e.start_time : '-'}</td>
-            <td>{e.end_time ? e.end_time : '-'}</td>
+            <th scope="row">{this.parseDate(e.date)}</th>
+            <td>{e.total_steps}</td>
+            <td>{parseFloat(e.ppm).toFixed(2)}</td>
+            <td>{e.duration}</td>
           </tr>)): null}
         </tbody>
       </table>

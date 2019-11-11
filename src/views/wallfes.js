@@ -10,23 +10,14 @@ class Walkfes extends React.Component {
         super(p);
         this.state = {
             data: [],
-            activities: []
         }
     }
 
     async getData() {
-        axios.get('/session')
+        axios.get('/users/user-activity/session/' + getUserId())
             .then(async res => {
-                await res.data.result.map(async e => {
-                    console.log(e.user_id === getUserId(),e.user_id,getUserId())
-                    if (e.user_id === getUserId()) {
-                        const a = await axios.get('/users/search/activity/' + getUserId() + '/' + e._id)
-                        console.log('>>>', a)
-                        e['activity'] = a.data.result;
-                        console.log('1',e);
-                        this.setState({ data: [...this.state.data, e] })
-                    }
-                })
+                this.setState({ data: res.data.result })
+                console.log('RES',res)
             })
             .catch(err => console.log(err))
     }
@@ -36,10 +27,9 @@ class Walkfes extends React.Component {
     }
 
     render() {
-        console.log(this.state.data)
         return (
             <Main title="Modo Walkfes">
-                {this.state.data.map((element, index) => (<CardSesion key={index} title={element.session_name} category={element.category} activity={element.total_step} id={element._id} data={element} />))}
+                {this.state.data.map((element, index) => (<CardSesion key={index} title={element.session_name} activity={element.total_steps} id={element.session_id} />))}
             </Main>
         )
     }

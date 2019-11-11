@@ -16,18 +16,17 @@ class CardSesion extends Component {
   }
 
   render() {
-    const {title,category,activity,name,id} = this.props;
+    const {title,category,activity,id,session} = this.props;
     return (
       <div className="col-md-4">
       <CardTrainfes>
-        <Link to={"/walkfes/"+id}>
+        <Link to={{pathname:"/walkfes/"+id,session:title}} >
           <div className="row">
             <div className="col-md-6">
               <div className="card-body">
                 <p className="card-title mb-1">{title}</p>
                 <p className="card-category m-0">{category}</p>
                 <p className="card-activity mb-0">{activity}</p>
-                <p className="text-black-50 m-0">{name}</p>
               </div>
             </div>
             <div className="col-md-3 d-flex justify-content-center p-0">
