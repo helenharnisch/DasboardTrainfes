@@ -12,7 +12,7 @@ class CardSesion extends Component {
   }
 
   async componentDidMount(){
-   
+
   }
 
   render() {
@@ -24,7 +24,7 @@ class CardSesion extends Component {
           <div className="row">
             <div className="col-md-6">
               <div className="card-body">
-                <p className="card-title mb-1">{title}</p>
+                <p className="card-title-session mb-1">{title}</p>
                 <p className="card-category m-0">{category}</p>
                 <p className="card-activity mb-0">{activity}</p>
               </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CustomButtons from '../components/CustomButtons.js'
+import  '../assets/css/components/CustomButtonsStyle.css'
 import styles from '../assets/css/LoginStyle.css'
 import axios from 'axios'
 import {setToken} from '../lib/Router'
@@ -28,7 +29,7 @@ class Login extends Component {
         const { mail, pass } = this.state;
         console.log(this.props)
         return axios.post('/users/login', {email:mail,password:pass})
-            .then(res => { 
+            .then(res => {
                 setToken(res.data.result);
                 this.props.history.push('/');
                 console.log(res)
@@ -59,7 +60,7 @@ class Login extends Component {
                             <br /><br />
                             <input type="text" placeholder="Contraseña" className="input-text" value={this.state.pass} onChange={(value) => this.setState({ pass: value.target.value })} />
                             <br /><br />
-                            <CustomButtons className="btn-trainfes-primary" button={"ENTRAR"} onClick={this.sign.bind(this)} />
+                            <CustomButtons className="btn-trainfes-trainfes" button={"ENTRAR"} onClick={this.sign.bind(this)} />
                         </form>
                     </div>
                 </div>

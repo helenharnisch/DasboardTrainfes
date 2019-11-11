@@ -72,7 +72,7 @@ class SessionDetails extends React.Component {
             <div className="col-md-12">
               <CardTrainfes>
                 <div className="card-body">
-                  <p className="card-title mb-1">Titulo</p>
+                  <p className="card-title mb-1">Gráfico</p>
                   <p className="card-category m-0">Total pasos</p>
                   <p className="card-activity mb-0">{this.state.pasos ? this.state.pasos : 0}</p>
                 </div>
