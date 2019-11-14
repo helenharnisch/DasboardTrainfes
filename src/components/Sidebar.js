@@ -16,7 +16,7 @@ class Sidebar extends Component {
               <Link className="nav-link" to="/">Dashboard</Link>
             </li>
             <li className="nav-item border-bottom">
-              <ListDown title="Modos" open={false}>
+              <ListDown title="Modos" className="nav-link" open={false}>
                 <Link to="/walkfes" className="nav-link">Walkfes</Link>
                 <Link to="/secuencial" className="nav-link">Secuencial</Link>
                 <Link to="/sensor" className="nav-link">Sensor</Link>

@@ -110,7 +110,7 @@ class SessionDetails extends React.Component {
           </div> : null}
 
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-8">
             <CardTrainfes>
               <div className="card-body">
                 <p className="card-title mb-1">Estadisticas</p>
@@ -124,6 +124,24 @@ class SessionDetails extends React.Component {
                   type="Bar"
                   options={completedTasksChart.options}
                   listener={completedTasksChart.animation}
+                />
+              </div>
+            </CardTrainfes>
+            </div>
+            <div className="col-md-4">
+            <CardTrainfes>
+              <div className="card-body">
+                <p className="card-title mb-1">Estadisticas</p>
+                <p className="card-category m-0">Mejor tiempo</p>
+                <p className="card-activity mb-0">130</p>
+              </div>
+              <div className="ct-chart">
+                <ChartistGraph
+                  className=""
+                  data={pie.data}
+                  type="Pie"
+                  options={pie.options}
+                  listener={pie.animation}
                 />
               </div>
             </CardTrainfes>
