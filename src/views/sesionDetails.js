@@ -73,7 +73,7 @@ class SessionDetails extends React.Component {
               <CardTrainfes>
                 <div className="card-body">
                   <p className="card-title mb-1">Gráfico</p>
-                  <p className="card-category m-0">Total pasos</p>
+                  <p className="card-category fw-600 m-0">Total pasos</p>
                   <p className="card-activity mb-0">{this.state.pasos ? this.state.pasos : 0}</p>
                 </div>
                 <div className="ct-chart">
@@ -81,8 +81,8 @@ class SessionDetails extends React.Component {
                     className=""
                     data={this.generateDataSteps(this.state.data.data_steps)}
                     type="Line"
-                    options={stepsChart.options}
-                    listener={stepsChart.animation}
+                    options={levelStepsChart.options}
+                    listener={levelStepsChart.animation}
                   /> : null}
                 </div>
               </CardTrainfes>
@@ -109,6 +109,26 @@ class SessionDetails extends React.Component {
             </div>
           </div> : null}
 
+          <div className="row">
+            <div className="col-md-12">
+            <CardTrainfes>
+              <div className="card-body">
+                <p className="card-title mb-1">Estadisticas</p>
+                <p className="card-category m-0">Mejor tiempo</p>
+                <p className="card-activity mb-0">130</p>
+              </div>
+              <div className="ct-chart">
+                <ChartistGraph
+                  className=""
+                  data={completedTasksChart.data}
+                  type="Bar"
+                  options={completedTasksChart.options}
+                  listener={completedTasksChart.animation}
+                />
+              </div>
+            </CardTrainfes>
+            </div>
+          </div>
           <div className="row">
             <div className="col-md-12">
               <CardTrainfes>

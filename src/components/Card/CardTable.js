@@ -21,10 +21,10 @@ class CardTable extends Component {
       <table className="table table-hover text-center">
         <thead className="text-black-50">
           <tr>
-            <th scope="col" className="border-0">Fecha</th>
-            <th scope="col" className="border-0">Total de pasos</th>
-            <th scope="col" className="border-0">PPM</th>
-            <th scope="col" className="border-0">Duracion</th>
+            <th scope="col" className="text-trainfes fw-600 border-0">Fecha</th>
+            <th scope="col" className="text-trainfes fw-600 border-0">Total de pasos</th>
+            <th scope="col" className="text-trainfes fw-600 border-0">Pasos/Min.</th>
+            <th scope="col" className="text-trainfes fw-600 border-0">Duración</th>
           </tr>
         </thead>
         <tbody className="text-black-50">
