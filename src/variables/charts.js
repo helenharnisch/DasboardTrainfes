@@ -14,7 +14,6 @@ var delays2 = 80,
 const pie = {
   data: {
     series: [10,30],
-    labels: [1,5]
   },
   options: {
     donut: true,
@@ -290,10 +289,61 @@ const emailsSubscriptionChart = {
 };
 
 
-//Gráfico Barras
-const completedTasksChart = {
+//Gráfico Barras Semana
+const weekStepsChart = {
   data: {
     labels: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+    series: [[20, 80, 70, 40, 20, 130 , 40]]
+  },
+  options: {
+    lineSmooth: Chartist.Interpolation.cardinal({
+      tension: 0
+    }),
+    low: 0,
+    high: 150, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    chartPadding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    }
+  },
+  animation: {
+    draw: function (data) {
+      if (data.type === "line" || data.type === "area") {
+        data.element.animate({
+          d: {
+            begin: 600,
+            dur: 700,
+            from: data.path
+              .clone()
+              .scale(1, 0)
+              .translate(0, data.chartRect.height())
+              .stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      } else if (data.type === "point") {
+        data.element.animate({
+          opacity: {
+            begin: (data.index + 1) * delays,
+            dur: durations,
+            from: 0,
+            to: 1,
+            easing: "ease"
+          }
+        });
+      }
+    }
+  }
+};
+
+
+//Gráfico Barras Tiempo
+const timeStepsChart = {
+  data: {
+    labels: ["8:00 hrs.", "9:00 hrs.", "10:00 hrs.", "11:00 hrs.", "12:00 hrs.", "13:00 hrs.", "14:00 hrs."],
     series: [[20, 80, 70, 40, 20, 130 , 40]]
   },
   options: {
@@ -344,9 +394,10 @@ const completedTasksChart = {
 
 module.exports = {
   levelStepsChart,
+  timeStepsChart,
   pie,
   stepsChart,
   emailsSubscriptionChart,
-  completedTasksChart,
+  weekStepsChart,
   pie
 };

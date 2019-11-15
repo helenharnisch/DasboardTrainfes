@@ -29,7 +29,7 @@ class Walkfes extends React.Component {
     render() {
         return (
             <Main title="Modo Walkfes">
-                {this.state.data.map((element, index) => (<CardSesion key={index}  title={element.session_name} activity={element.total_steps} id={element.session_id} />))}
+                {this.state.data.map((element, index) => (<CardSesion path="walkfes" key={index}  title={element.session_name} activity={element.total_steps} id={element.session_id} />))}
             </Main>
         )
     }

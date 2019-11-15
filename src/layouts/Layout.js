@@ -19,7 +19,7 @@ class Layout extends Component {
                     </div>
                     <div className="col-md-10 scroll-main">
                         <Navbar titulo={"Sesiones"} />
-                        <div className="col-md-11 mx-auto pt-60">
+                        <div className="col-md-12 mx-auto pt-60">
                             <Rutas />
                         </div>
                     </div>

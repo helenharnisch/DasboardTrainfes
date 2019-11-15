@@ -22,6 +22,7 @@ class Sidebar extends Component {
                 <Link to="/sensor" className="nav-link">Sensor</Link>
                 <Link to="/bicicleta" className="nav-link">Bicicleta</Link>
                 <Link to="/remo" className="nav-link">Remo</Link>
+                <Link to="/maqueta" className="nav-link">Maqueta</Link>
               </ListDown>
             </li>
           </ul>

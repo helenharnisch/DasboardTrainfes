@@ -4,9 +4,22 @@
   max-height: 170px;
 }
 
+.card-body-grafico{
+  padding: 15px 0px 10px 20px;
+  min-height: 150px;
+  max-height: 150px;
+}
+
 .card-title{
   color: #8598AD;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.card-title-grafico{
+  color: #8598AD;
   font-size: 21px;
+  letter-spacing: 1.5px;
 }
 
 .card-title-session{
@@ -14,9 +27,16 @@
   font-size: 14px;
 }
 
+.card-title-session-maqueta{
+  font-size: 18px;
+  text-decoration: none;
+  color: #8598AD;
+}
+
 .card-category{
   font-size: 18px;
   color: #1E88E5;
+  letter-spacing: 1.5px;
 }
 
 .card-activity{
@@ -24,6 +44,7 @@
   font-size: 48px;
   margin-top: -15px;
   font-weight: 500;
+  letter-spacing: 3px;
 }
 
 .iconArow:hover{

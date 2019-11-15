@@ -30,7 +30,7 @@
 }
 /*grosor donut*/
 .ct-slice-donut{
-  stroke-width:30px!important;
+  stroke-width:25px!important;
   stroke-linecap: round;
 }
 /*Grilla Gráfico*/
@@ -100,6 +100,14 @@ a{
 
 .fw-600{
     font-weight: 600;
+}
+
+.letter-spacing-1{
+  letter-spacing: 1.5px;
+}
+
+.letter-spacing-3{
+  letter-spacing: 3px;
 }
 
 .pt-60{
