@@ -14,6 +14,8 @@ import Main from '../components/Main'
 import IcoArow from '../assets/img/icon/icon-arow-back.svg'
 import CardTrainfes from '../components/Card/CardTrainfes.js';
 import CardMaqueta from '../components/Card/CardMaqueta.js';
+import CardMaqueta2 from '../components/Card/CardMaqueta2.js';
+import CardMaqueta3 from '../components/Card/CardMaqueta3.js';
 import CardLastSession from '../components/Card/CardLastSession.js';
 import CardRealSession from '../components/Card/CardRealSession.js';
 import CardReviewSession from '../components/Card/CardReviewSession.js';
@@ -64,12 +66,12 @@ class MaquetaDetails extends React.Component {
             </div>
             <div className="col-md-4">
               <CardTrainfes>
-                <CardMaqueta/>
+                <CardMaqueta2/>
               </CardTrainfes>
             </div>
             <div className="col-md-4">
               <CardTrainfes>
-                <CardMaqueta/>
+                <CardMaqueta3/>
               </CardTrainfes>
             </div>
           </div>
@@ -88,7 +90,7 @@ class MaquetaDetails extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <CardTrainfes>
-                <div className="card-body-grafico">
+                <div className="card-body-grafico ml-4">
                   <p className="card-title-grafico mb-1">Estadisticas por año</p>
                     <p className="card-category m-0">Mejor mes</p>
                   <p className="card-activity mb-0">123</p>
@@ -106,7 +108,7 @@ class MaquetaDetails extends React.Component {
             </div>
             </div>
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 mb-5">
               <CardTrainfes>
                 <Tab/>
               </CardTrainfes>

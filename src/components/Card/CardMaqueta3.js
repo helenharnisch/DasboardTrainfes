@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Sesion from '../../assets/img/sesion.svg'
+import Sesion from '../../assets/img/sesion_3.svg'
 
 
-class CardMaqueta extends Component {
+class CardMaqueta3 extends Component {
   render() {
     return (
 
@@ -15,4 +15,4 @@ class CardMaqueta extends Component {
   }
 }
 
-export default CardMaqueta;
+export default CardMaqueta3;

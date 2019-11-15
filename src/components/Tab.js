@@ -21,7 +21,7 @@ class Tab extends Component {
                   <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Año</a>
                 </li>
               </ul>
-              <div class="tab-content d-flex justify-content-center" id="myTabContent">
+              <div class="tab-content d-flex justify-content-center mt-1" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><img src={Img} className="img-fluid" alt="Tab"></img></div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><img src={Img} className="img-fluid" alt="Tab"></img></div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><img src={Img} className="img-fluid" alt="Tab"></img></div>

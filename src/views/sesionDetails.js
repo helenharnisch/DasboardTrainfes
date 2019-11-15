@@ -73,8 +73,8 @@ class SessionDetails extends React.Component {
             <div className="col-md-12">
               <CardTrainfes>
                 <div className="card-body-grafico">
-                  <p className="card-title-grafico mb-1">Gráfico</p>
-                  <p className="card-category m-0">Total pasos</p>
+                  <p className="card-title-grafico mb-1">Estadisticas por sesión Actual</p>
+                  <p className="card-category m-0">Pasos/Min.</p>
                   <p className="card-activity mb-0">{this.state.pasos ? this.state.pasos : 0}</p>
                 </div>
                 <div className="ct-chart">
@@ -109,27 +109,6 @@ class SessionDetails extends React.Component {
               </CardTrainfes>
             </div>
           </div> : null}
-
-          <div className="row">
-            <div className="col-md-12">
-            <CardTrainfes>
-              <div className="card-body-grafico">
-                <p className="card-title-grafico mb-1">Estadisticas</p>
-                <p className="card-category m-0">Mejor tiempo</p>
-                <p className="card-activity mb-0">130</p>
-              </div>
-              <div className="ct-chart">
-                <ChartistGraph
-                  className=""
-                  data={timeStepsChart.data}
-                  type="Bar"
-                  options={timeStepsChart.options}
-                  listener={timeStepsChart.animation}
-                />
-              </div>
-            </CardTrainfes>
-            </div>
-          </div>
           <div className="row">
             <div className="col-md-12">
               <CardTrainfes>

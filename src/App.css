@@ -187,3 +187,33 @@ a{
     transform: rotate(360deg);
   }
 }
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    background: #D4D4D4;
+    border-radius: 10px 10px 0px 0px;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    background: #F5F6FA;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #B9CEF9;
+    border-color: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 25px 10px;
+}
+
+.overflow {
+  overflow: auto;
+}
