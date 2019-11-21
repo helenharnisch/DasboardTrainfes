@@ -59,6 +59,13 @@ class MaquetaDetails extends React.Component {
         <a style={{ displa: "block", position: 'absolute', top: '70px', left: '0', cursor: 'poi' }} onClick={() => this.props.history.goBack()}><img src={IcoArow} /></a>
         <div className="col-md-12">
           <div className="row">
+            <div className="col-md-12">
+              <CardTrainfes>
+                <Tab/>
+              </CardTrainfes>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <CardTrainfes>
                 <CardMaqueta/>
@@ -104,13 +111,6 @@ class MaquetaDetails extends React.Component {
                     listener={levelStepsChart.animation}
                   />
                 </div>
-              </CardTrainfes>
-            </div>
-            </div>
-          <div className="row">
-            <div className="col-md-12 mb-5">
-              <CardTrainfes>
-                <Tab/>
               </CardTrainfes>
             </div>
           </div>

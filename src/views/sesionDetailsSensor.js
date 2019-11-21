@@ -4,12 +4,12 @@ import ChartistGraph from "react-chartist";
 import { options, animation1 } from '../variables/charts'
 import ctAreaGradient from 'chartist-plugin-gradient';
 import {
+  levelStepsChartTime,
   levelStepsChart,
   pie,
   stepsChart,
   emailsSubscriptionChart,
   weekStepsChart,
-  monthStepsChart,
   timeStepsChart
 } from "../variables/charts.js";
 import Main from '../components/Main'
@@ -28,7 +28,7 @@ import Grafico_2 from '../assets/img/grafico_2.svg'
 
 
 
-class SessionDetails extends React.Component {
+class SesionDetailsSensor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,10 +60,8 @@ class SessionDetails extends React.Component {
         <div className="col-md-12">
           <div className="row">
           <div className="col-md-12">
-             <Tab/>
+              <Tab/>
           </div>
-          </div>
-          <div className="row">
             <div className="col-md-4">
               <CardTrainfes>
                 <CardLastSession title={"Anterior Sesión"} category={"Total pasos"} activity={this.state.data.steps_ant_last_session ? this.state.data.steps_ant_last_session : 0} />
@@ -79,22 +77,22 @@ class SessionDetails extends React.Component {
                 <CardReviewSession title={"Total del mes"} category={"Total pasos"} activity={this.state.data.steps_actual_month ? this.state.data.steps_actual_month : 0} />
               </CardTrainfes>
             </div>
-            </div>
+          </div>
           <div className="row">
             <div className="col-md-8">
             <CardTrainfes>
             <div className="card-body">
               <p className="card-title-session-maqueta mb-0">Estadisticas de noviembre</p>
-              <p className="card-category m-0">Mejor día<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
+              <p className="card-category m-0">Mejor mes<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
               <p className="card-activity mb-0">340</p>
             </div>
-              <div className="ct-chart color-month">
+              <div className="ct-chart">
                 <ChartistGraph
                   className=""
-                  data={monthStepsChart.data}
+                  data={weekStepsChart.data}
                   type="Bar"
-                  options={monthStepsChart.options}
-                  listener={monthStepsChart.animation}
+                  options={weekStepsChart.options}
+                  listener={weekStepsChart.animation}
                 />
               </div>
             </CardTrainfes>
@@ -126,7 +124,7 @@ class SessionDetails extends React.Component {
                     <p className="card-category m-0">Mejor mes<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
                   <p className="card-activity mb-0">123</p>
                 </div>
-                <div className="ct-chart">
+                <div className="ct-chart color-calypso">
                   <ChartistGraph
                     className=""
                     data={levelStepsChart.data}
@@ -151,4 +149,4 @@ class SessionDetails extends React.Component {
   }
 }
 
-export default SessionDetails;
+export default SesionDetailsSensor;

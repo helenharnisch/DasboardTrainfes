@@ -13,16 +13,16 @@ class Sidebar extends Component {
         <div className="sidebar-trainfes sidebar-sticky">
           <ul className="nav flex-column">
             <li className="nav-item border-bottom">
-              <Link className="nav-link" to="/">Dashboard</Link>
+              <Link className="nav-link-trainfes" to="/">Dashboard</Link>
             </li>
             <li className="nav-item border-bottom overflow">
-              <ListDown title="Modos" className="nav-link" open={false}>
-                <Link to="/walkfes" className="nav-link">Walkfes</Link>
-                <Link to="/secuencial" className="nav-link">Secuencial</Link>
-                <Link to="/sensor" className="nav-link">Sensor</Link>
-                <Link to="/bicicleta" className="nav-link">Bicicleta</Link>
-                <Link to="/remo" className="nav-link">Remo</Link>
-                <Link to="/maqueta" className="nav-link">Maqueta</Link>
+              <ListDown title="Modos" className="nav-link-trainfes" open={false}>
+                <Link to="/walkfes" className="nav-link-trainfes">Walkfes</Link>
+                <Link to="/secuencial" className="nav-link-trainfes">Secuencial</Link>
+                <Link to="/sensor" className="nav-link-trainfes">Sensor</Link>
+                <Link to="/bicicleta" className="nav-link-trainfes">Bicicleta</Link>
+                <Link to="/remo" className="nav-link-trainfes">Remo</Link>
+                <Link to="/maqueta" className="nav-link-trainfes">Maqueta</Link>
               </ListDown>
             </li>
           </ul>

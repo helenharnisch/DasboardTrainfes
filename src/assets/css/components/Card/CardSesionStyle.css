@@ -1,11 +1,10 @@
 .card-body{
-  padding: 30px 0px 20px 20px;
-  min-height: 170px;
-  max-height: 170px;
+  min-height: 135px;
+  max-height: 135px;
+  padding: 10px 0 0 20px;
 }
 
 .card-body-grafico{
-  padding: 15px 0px 10px 20px;
   min-height: 150px;
   max-height: 150px;
 }
@@ -28,7 +27,7 @@
 }
 
 .card-title-session-maqueta{
-  font-size: 18px;
+  font-size: 24px;
   text-decoration: none;
   color: #8598AD;
 }

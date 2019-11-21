@@ -137,7 +137,7 @@ const stepsChartTwo = {
 
 };
 
-//Gráfico linea area animación
+//Gráfico linea area animación año
 const levelStepsChart = {
   data: {
     labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
@@ -173,6 +173,45 @@ const levelStepsChart = {
   }
 
 };
+
+
+//Gráfico linea area animación tiempo
+const levelStepsChartTime = {
+  data: {
+    labels: ["8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00", "8:00"],
+    series: [
+      [1, 5, 2, 5, 4, 9,5,4,6,10,2,9],
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+
+
+    ]
+  },
+  options: {
+    low: 0,
+    showArea: true
+
+
+  },
+  // for animation
+  animation: {
+    draw: function(data) {
+      if (data.type === "line" || data.type === "area") {
+        data.element.animate({
+          d: {
+            begin: 2000 * data.index,
+            dur: 2000,
+            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    }
+  }
+
+};
+
 
 //Gráfico Lineas
 const stepsChart = {
@@ -288,6 +327,42 @@ const emailsSubscriptionChart = {
   }
 };
 
+//Gráfico Barras Día
+const dayStepsChart = {
+  data: {
+    labels: ["8:00 hrs.", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs", "8:00 hrs"],
+    series: [[20, 80, 70, 40, 20, 130 , 40, 20]]
+  },
+  options: {
+    lineSmooth: Chartist.Interpolation.cardinal({
+      tension: 0
+    }),
+    low: 0,
+    high: 150, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    chartPadding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    }
+  },
+  animation:{
+      draw: function (data) {
+        if (data.type === "bar") {
+          data.element.animate({
+            opacity: {
+              begin: (data.index + 1) * delays2,
+              dur: durations2,
+              from: 0,
+              to: 1,
+              easing: "ease"
+            }
+          });
+        }
+      }
+    }
+};
+
 
 //Gráfico Barras Semana
 const weekStepsChart = {
@@ -308,39 +383,70 @@ const weekStepsChart = {
       left: 0
     }
   },
-  animation: {
-    draw: function (data) {
-      if (data.type === "line" || data.type === "area") {
-        data.element.animate({
-          d: {
-            begin: 600,
-            dur: 700,
-            from: data.path
-              .clone()
-              .scale(1, 0)
-              .translate(0, data.chartRect.height())
-              .stringify(),
-            to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint
-          }
-        });
-      } else if (data.type === "point") {
-        data.element.animate({
-          opacity: {
-            begin: (data.index + 1) * delays,
-            dur: durations,
-            from: 0,
-            to: 1,
-            easing: "ease"
-          }
-        });
+  animation:{
+      draw: function (data) {
+        if (data.type === "bar") {
+          data.element.animate({
+            opacity: {
+              begin: (data.index + 1) * delays2,
+              dur: durations2,
+              from: 0,
+              to: 1,
+              easing: "ease"
+            }
+          });
+        }
       }
     }
-  }
+};
+
+//Gráfico Barras Mes
+const monthStepsChart = {
+  data: {
+    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+    series: [
+      [28, 90, 14, 70],
+      [36, 24, 23, 58],
+      [90, 37, 48, 44],
+      [89, 78, 47, 29],
+      [78, 25, 48, 130],
+      [56, 58, 43, 15],
+      [16, 33, 85, 40]
+
+    ]
+  },
+  options: {
+    lineSmooth: Chartist.Interpolation.cardinal({
+      tension: 0
+    }),
+    low: 0,
+    high: 150, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    chartPadding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    }
+  },
+  animation:{
+      draw: function (data) {
+        if (data.type === "bar") {
+          data.element.animate({
+            opacity: {
+              begin: (data.index + 1) * delays2,
+              dur: durations2,
+              from: 0,
+              to: 1,
+              easing: "ease"
+            }
+          });
+        }
+      }
+    }
 };
 
 
-//Gráfico Barras Tiempo
+//Gráfico Lineas Tiempo
 const timeStepsChart = {
   data: {
     labels: ["8:00 hrs.", "9:00 hrs.", "10:00 hrs.", "11:00 hrs.", "12:00 hrs.", "13:00 hrs.", "14:00 hrs."],
@@ -395,9 +501,12 @@ const timeStepsChart = {
 module.exports = {
   levelStepsChart,
   timeStepsChart,
+  levelStepsChartTime,
   pie,
   stepsChart,
   emailsSubscriptionChart,
+  monthStepsChart,
   weekStepsChart,
+  dayStepsChart,
   pie
 };
