@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import IcoWalkfes from '../../assets/img/iconModos/icon-walkfes.svg'
 import IcoArow from '../../assets/img/icon/icon-arow.svg'
 import IcoCheckMark from '../../assets/img/icon/icon-check-mark.svg'
 import CardTrainfes from './CardTrainfes.js'
@@ -17,7 +16,7 @@ class CardSesion extends Component {
   }
 
   render() {
-    const {title,titleMaqueta,category,activity,id,session,path} = this.props;
+    const {title,titleMaqueta,category,activity,imgModes,id,session,path} = this.props;
     return (
       <div className="col-md-4">
       <CardTrainfes>
@@ -46,7 +45,7 @@ class CardSesion extends Component {
               </table>
             </div>
             <div className="col-md-3 d-flex justify-content-center p-0">
-              <img src={IcoWalkfes} className="img-fluid" alt="Icon walkfes"></img>
+              <img src={this.props.imgModes} className="img-fluid" alt=""></img>
             </div>
             <div className="col-md-2 d-flex align-items-end p-0">
             <img src={IcoArow} className="img-fluid iconArow" alt="Icon Arow"></img>

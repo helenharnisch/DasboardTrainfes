@@ -11,7 +11,7 @@ class CardReviewSession extends Component {
   }
 
   render() {
-    const {title,category,activity,name,id} = this.props;
+    const {title,category,activity,name,imgModes,id} = this.props;
     return (
       <div className="row">
           <div className="col-md-7">
@@ -36,7 +36,7 @@ class CardReviewSession extends Component {
             </table>
           </div>
           <div className="col-md-4 d-flex justify-content-center p-0">
-            <img src={IcoWalkfesTwo} className="img-fluid" alt="Icon walkfes"></img>
+            <img src={this.props.imgModes} className="img-fluid" alt=""></img>
           </div>
       </div>
     )

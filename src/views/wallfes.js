@@ -1,6 +1,7 @@
 import React from "react";
 import Main from '../components/Main'
 import CardSesion from '../components/Card/CardSesion'
+import IcoWalkfes from '../assets/img/iconModos/icon-walkfes.svg'
 import axios from 'axios'
 import { getUserId } from '../lib/Router'
 
@@ -29,7 +30,7 @@ class Walkfes extends React.Component {
     render() {
         return (
             <Main title="Modo Walkfes">
-                {this.state.data.map((element, index) => (<CardSesion path="walkfes" key={index}  title={element.session_name} category={"Total pasos"} activity={element.total_steps} id={element.session_id} />))}
+                {this.state.data.map((element, index) => (<CardSesion path="walkfes" key={index}  title={element.session_name} category={"Total pasos"} imgModes={IcoWalkfes} activity={element.total_steps} id={element.session_id} />))}
             </Main>
         )
     }

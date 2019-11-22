@@ -20,7 +20,7 @@ import CardLastSession from '../components/Card/CardLastSession.js';
 import CardRealSession from '../components/Card/CardRealSession.js';
 import CardReviewSession from '../components/Card/CardReviewSession.js';
 import CardTable from '../components/Card/CardTable.js';
-import Tab from '../components/Tab.js';
+import TabWalkfes from '../components/TabWalkfes.js';
 import axios from 'axios';
 import { getUserId } from '../lib/Router'
 import Grafico_1 from '../assets/img/grafico_1.svg'
@@ -61,7 +61,7 @@ class MaquetaDetails extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <CardTrainfes>
-                <Tab/>
+                <TabWalkfes/>
               </CardTrainfes>
             </div>
           </div>
