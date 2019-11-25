@@ -29,7 +29,7 @@ class CardSesion extends Component {
                 <p className="card-category m-0">{category}<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
                 <p className="card-activity mb-0">{activity}</p>
               </div>
-              <table class="table-date">
+              <table className="table-date">
                 <thead>
                   <tr>
                     <th scope="col">Fecha</th>

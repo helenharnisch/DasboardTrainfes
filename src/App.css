@@ -32,7 +32,7 @@
 /*grosor donut*/
 .ct-slice-donut{
   stroke-width:18px!important;
-  stroke-linecap: round;
+  /*stroke-linecap: round;*/
 }
 /*Grilla Gráfico*/
 .ct-grid {
@@ -71,15 +71,18 @@
 .color-calypso .ct-series-a .ct-bar{
   stroke: #29E1FF;
 }
-.ct-series-a .ct-slice-donut {
-  stroke: #EFF0F2;
-}
 /*Color Gráfico Donut*/
-.ct-series-b .ct-slice-donut {
+.color-calypso .ct-series-a .ct-slice-donut {
   stroke: #29E1FF;
 }
-.color-violet .ct-series-b .ct-slice-donut {
+.color-violet .ct-series-a .ct-slice-donut {
   stroke: #B9CEF9;
+}
+.color-orange .ct-series-a .ct-slice-donut {
+  stroke: #FF9F2F;
+}
+.ct-series-a .ct-slice-donut {
+  stroke: #EFF0F2;
 }
 .ct-series-b .ct-point,
 .ct-series-b .ct-line{
@@ -113,7 +116,20 @@
 .ct-label .ct-vertical .ct-start{
   color: #FF9A03;
 }
-
+/*make a color different to fill-donut series*/
+.ct-chart-donut .ct-series-a .ct-slice-donut {
+    stroke-linecap: round;
+}
+/*make b hidden*/
+.ct-chart-donut .ct-series-b .ct-slice-donut {
+    stroke: #efefef;
+    opacity: 0.0;
+}
+/*make all fill-donut series visible and set color*/
+.ct-chart-donut .ct-fill-donut .ct-slice-donut{
+    stroke: #efefef;
+    opacity: 1;
+}
 /*Generales*/
 
 a{
@@ -248,6 +264,12 @@ a{
     color: #ffffff;
     background-color: #2696FF;
     border-color: none;
+}
+
+.nav-tabs .nav-link-setting.active {
+  color: #ffffff;
+  background-color: #F38504;
+  border-color: none;
 }
 
 .nav-link, .nav-link-setting {

@@ -22,6 +22,7 @@ import CardRealSession from '../components/Card/CardRealSession.js';
 import CardReviewSession from '../components/Card/CardReviewSession.js';
 import CardTable from '../components/Card/CardTable.js';
 import TabWalkfes from '../components/TabWalkfes.js';
+import TabWalkfes2 from '../components/TabWalkfes2.js';
 import axios from 'axios';
 import { getUserId } from '../lib/Router'
 import Grafico_1 from '../assets/img/grafico_1.svg'
@@ -60,6 +61,7 @@ class SessionDetailsWalkfes extends React.Component {
         <a style={{ displa: "block", position: 'absolute', top: '70px', left: '0', cursor: 'pointer' }} onClick={() => this.props.history.goBack()}><img src={IcoArow} /></a>
         <div className="col-md-12">
           <div className="row">
+
           <div className="col-md-12">
              <TabWalkfes/>
           </div>
@@ -107,7 +109,7 @@ class SessionDetailsWalkfes extends React.Component {
               <p className="card-category m-0">Total pasos<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
               <p className="card-activity mb-0">340</p>
             </div>
-              <div className="ct-chart">
+              <div className="ct-chart color-calypso">
                 <ChartistGraph
                   className=""
                   data={pie.data}

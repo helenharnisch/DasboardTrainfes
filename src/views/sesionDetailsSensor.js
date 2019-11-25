@@ -106,7 +106,7 @@ class SesionDetailsSensor extends React.Component {
               <p className="card-category m-0">Total Reps.<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
               <p className="card-activity mb-0">340</p>
             </div>
-              <div className="ct-chart">
+              <div className="ct-chart color-calypso">
                 <ChartistGraph
                   className=""
                   data={pie.data}

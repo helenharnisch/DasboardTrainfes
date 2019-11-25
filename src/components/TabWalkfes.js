@@ -17,6 +17,8 @@ import {
 import CardTrainfes from '../components/Card/CardTrainfes.js';
 import IcoCheckMark from '../assets/img/icon/icon-check-mark.svg'
 import IcoReminderElectrodeWalkfes from '../assets/img/iconPerson/icon-electrode-reminder-walkfes.svg'
+import IcoCanalWalkfes from '../assets/img/configuracion-canal-walkfes.svg'
+
 
 
 class TabWalkfes extends Component {
@@ -25,19 +27,19 @@ class TabWalkfes extends Component {
       <div>
       <ul className="nav nav-tabs nav-fill" id="myTab" role="tablist">
           <li className="nav-item">
-              <a className="nav-link active" id="dia-tab" data-toggle="tab" href="#dia" role="tab" aria-controls="home" aria-selected="true">Día</a>
+              <a className="nav-link active" id="dia-tab" data-toggle="tab" href="#dia" role="tab" aria-controls="dia" aria-selected="true">Día</a>
           </li>
           <li className="nav-item">
-              <a className="nav-link" id="semana-tab" data-toggle="tab" href="#semana" role="tab" aria-controls="profile" aria-selected="false">Semana</a>
+              <a className="nav-link" id="semana-tab" data-toggle="tab" href="#semana" role="tab" aria-controls="semana" aria-selected="false">Semana</a>
           </li>
           <li className="nav-item">
-              <a className="nav-link" id="mes-tab" data-toggle="tab" href="#mes" role="tab" aria-controls="contact" aria-selected="false">Mes</a>
+              <a className="nav-link" id="mes-tab" data-toggle="tab" href="#mes" role="tab" aria-controls="mes" aria-selected="false">Mes</a>
           </li>
           <li className="nav-item">
-              <a className="nav-link" id="ano-tab" data-toggle="tab" href="#ano" role="tab" aria-controls="contact" aria-selected="false">Año</a>
+              <a className="nav-link" id="ano-tab" data-toggle="tab" href="#ano" role="tab" aria-controls="ano" aria-selected="false">Año</a>
           </li>
           <li className="nav-item d-flex justify-content-end">
-              <a className="nav-link-setting" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Configuración</a>
+              <a className="nav-link-setting" id="configuracion-tab" data-toggle="tab" href="#configuracion" role="tab" aria-controls="configuracion" aria-selected="false">Configuración</a>
           </li>
       </ul>
       <div className="tab-content mt-1" id="myTabContent">
@@ -45,7 +47,7 @@ class TabWalkfes extends Component {
            <div className="row">
             <div className="col-md-3 mt-4 d-flex justify-content-center">
              <CardTrainfes>
-              <p style={{ padding: "10px 20px 20px" }}className="card-title-session-maqueta text-center mb-0">Electrodos</p>
+              <p style={{ padding: "10px 20px 20px" }} className="card-title-session-maqueta text-center mb-0">Electrodos</p>
               <div className="d-flex align-items-center d-flex justify-content-center">
               <img src={IcoReminderElectrodeWalkfes} className="img-fluid" alt="Ico Reminder Electrode Walkfes"></img>
               </div>
@@ -191,9 +193,53 @@ class TabWalkfes extends Component {
                  options={pie.options}
                  listener={pie.animation} />
                </div>
-                 </CardTrainfes>
+                </CardTrainfes>
                </div>
              </div>
+          </div>
+          <div className="tab-pane fade show active" id="configuracion" role="tabpanel" aria-labelledby="configuracion-tab">
+           <div className="row">
+            <div className="col-md-6 mt-4 d-flex justify-content-center">
+             <CardTrainfes>
+             <div style={{ padding: "10px 20px 0" }}>
+              <p className="card-title-session-maqueta mb-0">Configuracion Sesión</p>
+              <p className="card-category m-0">Canales<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
+            </div>
+              <div className="d-flex align-items-center d-flex justify-content-center">
+              <img src={IcoCanalWalkfes} className="img-fluid" alt="Ico Canal Walkfes"></img>
+              <img src={IcoReminderElectrodeWalkfes} className="img-fluid ml-5 mb-4" alt="Ico Reminder Electrode Walkfes"></img>
+              </div>
+             </CardTrainfes>
+            </div>
+            <div className="col-md-6 mt-4">
+             <CardTrainfes>
+              <div className="card-body">
+               <p className="card-title-session-maqueta mb-0">Configuracion Sesión</p>
+               <p className="card-category m-0">Intensidad<span><img src={IcoCheckMark} className="img-fluid mx-2" alt="Icon Check Mar"></img></span></p>
+             </div>
+             <div className="row">
+                <div className="col-md-6">
+                 <div className="ct-chart color-violet">
+                  <ChartistGraph
+                   className=""
+                   data={pie.data} type="Pie"
+                   options={pie.options}
+                   listener={pie.animation} />
+                 </div>
+               </div>
+               <div className="col-md-6">
+                <div className="ct-chart color-violet">
+                 <ChartistGraph
+                  className=""
+                  data={pie.data} type="Pie"
+                  options={pie.options}
+                  listener={pie.animation} />
+                </div>
+              </div>
+             </div>
+              </CardTrainfes>
+            </div>
+            </div>
           </div>
       </div>
   </div>
