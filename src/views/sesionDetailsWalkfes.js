@@ -63,7 +63,7 @@ class SessionDetailsWalkfes extends React.Component {
           <div className="row">
 
           <div className="col-md-12">
-             <TabWalkfes/>
+             <TabWalkfes2/>
           </div>
           </div>
           <div className="row">

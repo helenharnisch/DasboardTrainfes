@@ -244,7 +244,7 @@ a{
     background: #D4D4D4;
     border-radius: 50px;
     margin-right: 5px;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .nav-tabs .nav-link-setting {
