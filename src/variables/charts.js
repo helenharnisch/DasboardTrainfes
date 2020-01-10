@@ -14,8 +14,7 @@ var delays2 = 80,
 
 const pie = {
   data: {
-    series: [150, 70 ],
-    labels: ['', '']
+    series: [150, 70 ]
   },
   options: {
     donut: true,
@@ -71,20 +70,76 @@ const pie = {
 
         // We can't use guided mode as the animations need to rely on setting begin manually
         // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-        data.element.animate(animationDefinition, false);
+        data.element.animate(animationDefinition, true);
       }
       }
     }
+  };
 
-  /*  // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-    chart.on('created', function() {
-      if(window.__anim21278907124) {
-        clearTimeout(window.__anim21278907124);
-        window.__anim21278907124 = null;
-      }
-      window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
-    });*/
+  const pieIntensity = {
+    data: {
+      series: [150, 70 ]
+    },
+    options: {
+      donut: true,
+      donutWidth: 45,
+      startAngle: 190,
+      total: 220,
+      showLabel: false,
+      plugins: [
+          Chartist.plugins.fillDonut({
+              items: [{
+                  content: '<i class="fa fa-tachometer"></i>',
+                  position: 'bottom',
+                  offsetY : 10,
+                  offsetX: -2
+              }, {
+                  content: '<h2 class="text-secondary">13<span class="small text-secondary font-weight-bolder">mA </span></h2>'
+              }]
+          })
+      ],
+    },
+
+    animation: {
+      draw: function(data) {
+        if (data.type === 'slice' && data.index == 0 ) {
+          // Get the total path length in order to use for dash array animation
+          var pathLength = data.element._node.getTotalLength();
+
+          // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+          data.element.attr({
+              'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+          });
+
+          // Create animation definition while also assigning an ID to the animation for later sync usage
+          var animationDefinition = {
+              'stroke-dashoffset': {
+                  id: 'anim' + data.index,
+                  dur: 1200,
+                  from: -pathLength + 'px',
+                  to:  '0px',
+                  easing: Chartist.Svg.Easing.easeOutQuint,
+                  fill: 'freeze'
+              }
+          };
+
+          if(data.index !== 0) {
+    animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
   }
+
+          // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+          data.element.attr({
+              'stroke-dashoffset': -pathLength + 'px'
+          });
+
+          // We can't use guided mode as the animations need to rely on setting begin manually
+          // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+          data.element.animate(animationDefinition, true);
+        }
+        }
+      }
+    };
+
 
 
 const pi = {
@@ -514,6 +569,7 @@ const timeStepsChart = {
 
 
 module.exports = {
+  pieIntensity,
   levelStepsChart,
   timeStepsChart,
   levelStepsChartTime,

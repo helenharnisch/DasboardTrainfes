@@ -13,19 +13,19 @@ import {
 import Main from '../components/Main'
 import IcoArow from '../assets/img/icon/icon-arow-back.svg'
 import IcoCheckMark from '../assets/img/icon/icon-check-mark.svg'
-import IcoSensorTwo from '../assets/img/iconModos/icon-sensor-two.svg'
+import IcoRemoTwo from '../assets/img/iconModos/icon-remo-two.svg'
 import CardTrainfes from '../components/Card/CardTrainfes.js';
 import CardLastSession from '../components/Card/CardLastSession.js';
 import CardRealSession from '../components/Card/CardRealSession.js';
 import CardReviewSession from '../components/Card/CardReviewSession.js';
 import CardTable from '../components/Card/CardTable.js';
-import TabSensor from '../components/Tab/TabSensor.js';
+import TabSensor from '../components/Tab/TabRemo.js';
 import axios from 'axios';
 import { getUserId } from '../lib/Router'
 
 
 
-class SesionDetailsSensor extends React.Component {
+class SesionDetailsRemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,7 +52,7 @@ class SesionDetailsSensor extends React.Component {
 
   render() {
     return (
-      <Main title={"SESSION TEST SENSOR APP"}>
+      <Main title={"SESSION TEST REMO APP"}>
         <a style={{ displa: "block", position: 'absolute', top: '70px', left: '0', cursor: 'pointer' }} onClick={() => this.props.history.goBack()}><img src={IcoArow} /></a>
         <div className="col-md-12">
           <div className="row">
@@ -61,17 +61,17 @@ class SesionDetailsSensor extends React.Component {
           </div>
             <div className="col-md-4">
               <CardTrainfes>
-                <CardLastSession title={"Penúltima Sesión"} category={"Total Reps."} imgModes={IcoSensorTwo} activity={this.state.data.steps_ant_last_session ? this.state.data.steps_ant_last_session : 0} />
+                <CardLastSession title={"Penúltima Sesión"} category={"Total Reps."} imgModes={IcoRemoTwo} activity={this.state.data.steps_ant_last_session ? this.state.data.steps_ant_last_session : 0} />
               </CardTrainfes>
             </div>
             <div className="col-md-4">
               <CardTrainfes>
-                <CardRealSession title={"Última Sesión"} category={"Total Reps."} imgModes={IcoSensorTwo} activity={this.state.data.steps_last_session ? this.state.data.steps_last_session : 0} />
+                <CardRealSession title={"Última Sesión"} category={"Total Reps."} imgModes={IcoRemoTwo} activity={this.state.data.steps_last_session ? this.state.data.steps_last_session : 0} />
               </CardTrainfes>
             </div>
             <div className="col-md-4">
               <CardTrainfes>
-                <CardReviewSession title={"Total del mes"} category={"Total Reps."} imgModes={IcoSensorTwo} activity={this.state.data.steps_actual_month ? this.state.data.steps_actual_month : 0} />
+                <CardReviewSession title={"Total del mes"} category={"Total Reps."} imgModes={IcoRemoTwo} activity={this.state.data.steps_actual_month ? this.state.data.steps_actual_month : 0} />
               </CardTrainfes>
             </div>
           </div>
@@ -146,4 +146,4 @@ class SesionDetailsSensor extends React.Component {
   }
 }
 
-export default SesionDetailsSensor;
+export default SesionDetailsRemo;

@@ -1,8 +1,6 @@
 import React from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
-import { options, animation1 } from '../variables/charts'
-import ctAreaGradient from 'chartist-plugin-gradient';
 import {
   levelStepsChart,
   pie,
@@ -21,12 +19,9 @@ import CardLastSession from '../components/Card/CardLastSession.js';
 import CardRealSession from '../components/Card/CardRealSession.js';
 import CardReviewSession from '../components/Card/CardReviewSession.js';
 import CardTable from '../components/Card/CardTable.js';
-import TabWalkfes from '../components/TabWalkfes.js';
-import TabWalkfes2 from '../components/TabWalkfes2.js';
+import TabWalkfes from '../components/Tab/TabWalkfes.js';
 import axios from 'axios';
 import { getUserId } from '../lib/Router'
-import Grafico_1 from '../assets/img/grafico_1.svg'
-import Grafico_2 from '../assets/img/grafico_2.svg'
 
 
 
@@ -61,9 +56,8 @@ class SessionDetailsWalkfes extends React.Component {
         <a style={{ displa: "block", position: 'absolute', top: '70px', left: '0', cursor: 'pointer' }} onClick={() => this.props.history.goBack()}><img src={IcoArow} /></a>
         <div className="col-md-12">
           <div className="row">
-
           <div className="col-md-12">
-             <TabWalkfes2/>
+             <TabWalkfes/>
           </div>
           </div>
           <div className="row">

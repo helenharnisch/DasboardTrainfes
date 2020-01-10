@@ -82,7 +82,7 @@
   stroke: #FF9F2F;
 }
 .ct-series-a .ct-slice-donut {
-  stroke: #EFF0F2;
+  stroke: #E1E2E3;
 }
 .ct-series-b .ct-point,
 .ct-series-b .ct-line{
@@ -239,15 +239,32 @@ a{
   }
 }
 
-.nav-tabs .nav-link {
+.react-tabs__tab-list{
+  border: none;
+}
+
+.nav-tabs .nav-link, .react-tabs__tab {
     border: 1px solid transparent;
     background: #D4D4D4;
     border-radius: 50px;
     margin-right: 5px;
     color: #ffffff !important;
+    flex: 1 1 auto;
+    text-align: center;
 }
 
-.nav-tabs .nav-link-setting {
+.react-tabs__tab, .react-tabs__tab-setting {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 60px;
+    cursor: pointer;
+}
+
+.nav-tabs .nav-link-setting, .react-tabs__tab-setting {
     border: 1px solid transparent;
     background: #FF9F2F;
     border-radius: 50px;
@@ -255,18 +272,18 @@ a{
     color: #ffffff;
 }
 
-.nav-tabs {
+.nav-tabs, .react-tabs__tab--selected {
     border-bottom: none;
     background: #F5F6FA;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .react-tabs__tab--selected{
     color: #ffffff;
     background-color: #2696FF;
     border-color: none;
 }
 
-.nav-tabs .nav-link-setting.active {
+.nav-tabs .nav-link-setting.active, .react-tabs__tab-setting--selected {
   color: #ffffff;
   background-color: #F38504;
   border-color: none;
