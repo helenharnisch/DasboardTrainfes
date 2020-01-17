@@ -13,9 +13,10 @@ import CardTrainfes from '../../components/Card/CardTrainfes.js';
 import IcoCheckMark from '../../assets/img/icon/icon-check-mark.svg'
 import IcoReminderElectrodeBicicleta from '../../assets/img/iconPerson/icon-electrode-reminder-bicicleta.svg'
 import IcoReminderElectrodeBicicletaDorsal from '../../assets/img/iconPerson/icon-electrode-reminder-bicicleta-dorsal.svg'
-import IcoAyudaBicicleta from '../../assets/img/iconPerson/ayuda-bicicleta.png'
+import IcoAyudaBicicleta from '../../assets/img/iconPerson/ayuda-bicicleta.svg'
 import IcoAyudaBicicletaTwo from '../../assets/img/iconPerson/ayuda-bicicleta-two.png'
 import IcoListasSensor from '../../assets/img/ListasSensor.svg'
+import Carousel from 'react-bootstrap/Carousel'
 
 
 class TabBicicleta extends Component {
@@ -53,20 +54,26 @@ class TabBicicleta extends Component {
                 </div>
                 <div className="col-md-6 mt-4 d-flex justify-content-center">
                     <CardTrainfes>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <p style={{ padding: "10px 20px 20px" }}className="card-title-session-maqueta text-center mb-0">Ayuda</p>
-                                <div style={{ marginBottom: "32px" }}className="d-flex align-items-center d-flex justify-content-center">
-                                    <img src={IcoAyudaBicicleta} className="img-fluid" alt="Ico Ayuda Bicicleta"></img>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <p style={{ padding: "10px 20px 20px" }}className="card-title-session-maqueta text-center mb-0">Ayuda</p>
-                                <div style={{ marginBottom: "32px" }}className="d-flex align-items-center d-flex justify-content-center">
-                                    <img src={IcoAyudaBicicletaTwo} className="img-fluid" alt="Ico Ayuda Bicicleta"></img>
-                                </div>
-                            </div>
-                        </div>
+                        <Carousel className="d-flex justify-content-center">
+                            <Carousel.Item>
+
+                                <img src={IcoAyudaBicicleta} className="img-fluid d-flex justify-content-center" alt="Ayuda Bicicleta"></img>
+                                <Carousel.Caption>
+
+                                <h3 className="text-dark">First slide label</h3>
+                                <p className="text-dark">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            <Carousel.Item>
+
+                                <img src={IcoAyudaBicicletaTwo} className="img-fluid" alt="Ayuda Bicicleta"></img>
+
+                                <Carousel.Caption>
+                                <h3 className="text-dark">Second slide label</h3>
+                                <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
                     </CardTrainfes>
                 </div>
             </div>

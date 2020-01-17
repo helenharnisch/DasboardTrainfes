@@ -16,7 +16,7 @@ class CardSesion extends Component {
   }
 
   render() {
-    const {title,titleMaqueta,category,activity,imgModes,id,session,path} = this.props;
+    const {title,titleMaqueta,category,activity,id,path} = this.props;
     return (
       <div className="col-md-4">
       <CardTrainfes>

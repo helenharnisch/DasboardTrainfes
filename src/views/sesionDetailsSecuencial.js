@@ -2,13 +2,9 @@ import React from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import {
-  levelStepsChartTime,
   levelStepsChart,
   pie,
-  stepsChart,
-  emailsSubscriptionChart,
   weekStepsChart,
-  timeStepsChart
 } from "../variables/charts.js";
 import Main from '../components/Main'
 import IcoArow from '../assets/img/icon/icon-arow-back.svg'

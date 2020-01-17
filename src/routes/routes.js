@@ -12,6 +12,7 @@ import Bicicleta from '../views/bicicleta';
 import SesionDetailsBicicleta from '../views/sesionDetailsBicicleta';
 import Remo from '../views/remo';
 import SesionDetailsRemo from '../views/sesionDetailsRemo';
+import Cuenta from '../views/cuenta';
 
 
 const Rutas = () => (
@@ -27,6 +28,7 @@ const Rutas = () => (
         <Route exact path="/bicicleta/:id" component={SesionDetailsBicicleta}></Route>
         <Route exact path="/remo" component={Remo}></Route>
         <Route exact path="/remo/:id" component={SesionDetailsRemo}></Route>
+        <Route exact path="/cuenta" component={Cuenta}></Route>
     </Fragment>
 )
 

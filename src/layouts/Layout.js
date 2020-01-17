@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './../index.css';
 // Componentes
 import Navbar from '../components/Navbar.js';
 import Sidebar from '../components/Sidebar.js';
@@ -17,7 +17,7 @@ class Layout extends Component {
                     <div className="col-md-2 p-0">
                         <Sidebar />
                     </div>
-                    <div className="col-md-10 scroll-main">
+                    <div className="col-md-10 scroll-main bg-light">
                         <Navbar titulo={"Sesiones"} />
                         <div className="col-md-12 mx-auto pt-60">
                             <Rutas />
